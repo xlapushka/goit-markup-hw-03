@@ -1,0 +1,302 @@
+:root {
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: var(--slate);
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link,
+link-logo {
+  text-decoration: none;
+  color: var(--navy-blue);
+}
+
+.link-1 {
+  text-decoration: none;
+  color: var(--slate);
+}
+
+.link-2 {
+  text-decoration: none;
+  color: var(--cloud);
+}
+
+.link:hover,
+.link-1:hover,
+.link:focus,
+.link-1:focus {
+  color: var(--iris);
+}
+
+.invisible {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+header {
+  padding: 24px 156px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav .list {
+  padding-left: 36px;
+}
+
+header .link,
+header .link-1 {
+  padding-right: 40px;
+}
+
+header .logo {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+header .logo span,
+footer .footer-logo span {
+  color: var(--iris);
+}
+
+header .contact-us {
+  font-weight: 400;
+  font-style: normal;
+}
+
+main .hero {
+  height: 600px;
+  background-color: var(--navy-blue);
+}
+
+main .hero h1 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  padding-top: 188px;
+  text-align: center;
+}
+
+main .hero button {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--iris);
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--iris);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  display: block;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+main .hero button:hover,
+main .hero button:focus {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--iris);
+}
+
+main .about {
+  padding: 120px 144px 0 144px;
+}
+
+main .about h3 {
+  color: var(--navy-blue);
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+main .about p {
+  font-weight: 400;
+}
+
+main .what-we-are-doing,
+main .our-team {
+  padding: 120px 144px 120px 144px;
+}
+
+main .what-we-are-doing h2,
+main .our-team h2 {
+  color: var(--navy-blue);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 72px;
+}
+
+main .our-team {
+  background-color: var(--cloud);
+}
+
+main .our-team li {
+  background-color: var(--white);
+  width: 264px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+main .our-team h3 {
+  color: var(--navy-blue);
+  font-size: 20px;
+  line-height: 1.2;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main .our-team p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--slate);
+  padding-top: 0;
+  padding-bottom: 32px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--navy-blue);
+  text-align: left;
+}
+
+footer div {
+  width: 264px;
+  height: 110px;
+  padding-top: 100px;
+  padding-left: 156px;
+  padding-bottom: 100px;
+}
+
+footer .footer-logo {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+footer p {
+  color: var(--cornflower);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.33;
+}
+
+/* =====================index-1=============== */
+
+.studio {
+  padding: 96px 156px 120px 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.studio .filter {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 72px;
+}
+
+.studio .filter button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  background-color: var(--cloud);
+  border: 1px solid var(--cornflower);
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: var(--iris);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.studio .filter button:hover,
+.studio .filter button:focus {
+  background-color: var(--iris);
+  border: 1px solid var(--iris);
+  color: var(--cornflower);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects li {
+  padding-bottom: 48px;
+}
+
+.projects h2 {
+  color: var(--navy-blue);
+  font-size: 20px;
+  line-height: 1.2;
+  padding-left: 16px;
+}
+
+.projects p {
+  font-weight: 400;
+  padding-left: 16px;
+}
+
+.projects-row li {
+  border: 1px solid var(--cornflower);
+}
+
+.projects-row {
+  display: flex;
+  justify-content: space-between;
+}
