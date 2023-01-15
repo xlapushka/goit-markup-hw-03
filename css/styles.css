@@ -12,36 +12,84 @@
   --white: #fff;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+
+  background-color: #ffffff;
+  color: var(--slate);
+
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
-  background-color: #ffffff;
-  color: var(--slate);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  width: 1182px;
 }
 
 .list {
-  list-style-type: none;
-  padding-left: 0;
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
-.link,
-link-logo {
-  text-decoration: none;
+.link {
   color: var(--navy-blue);
+
+  text-decoration: none;
 }
 
 .link-1 {
-  text-decoration: none;
   color: var(--slate);
+
+  text-decoration: none;
 }
 
 .link-2 {
-  text-decoration: none;
   color: var(--cloud);
+
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .link:hover,
@@ -49,6 +97,15 @@ link-logo {
 .link:focus,
 .link-1:focus {
   color: var(--iris);
+
+  cursor: pointer;
+}
+
+.logo:hover,
+.logo:focus {
+  color: var(--navy-blue);
+
+  cursor: pointer;
 }
 
 .invisible {
@@ -64,24 +121,29 @@ link-logo {
   margin: -1px;
 }
 
+/* ====================HEADER+=========================== */
+
 header {
-  padding: 24px 156px;
+  display: block;
+  align-items: center;
+
+  background-color: var(--white);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+header .menu {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+
+header .menu > address {
+  margin-left: auto;
 }
 
 header nav {
   display: flex;
   align-items: center;
-}
-
-header nav .list {
-  padding-left: 36px;
-}
-
-header .link,
-header .link-1 {
-  padding-right: 40px;
 }
 
 header .logo {
@@ -93,14 +155,35 @@ header .logo {
 }
 
 header .logo span,
-footer .footer-logo span {
+footer .footer-logo span,
+.active {
   color: var(--iris);
 }
 
+header nav .link.logo {
+  margin-right: 76px;
+}
+
+header nav .link,
+header .contact-us .link-1 {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+header nav .list li:not(:last-child),
+header .contact-us li:not(:last-child) {
+  margin-right: 40px;
+}
+
 header .contact-us {
+  margin-left: auto;
+
   font-weight: 400;
   font-style: normal;
 }
+
+/* ====================MAIN=========================== */
 
 main .hero {
   height: 600px;
@@ -108,28 +191,32 @@ main .hero {
 }
 
 main .hero h1 {
+  padding-top: 188px;
+
   color: var(--white);
+
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  padding-top: 188px;
   text-align: center;
 }
 
 main .hero button {
-  font-family: inherit;
-  font-weight: 600;
-  color: var(--white);
-  background-color: var(--iris);
-  padding: 16px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--iris);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
   display: block;
   margin: 0 auto;
   margin-top: 48px;
+  padding: 16px 32px;
+
+  color: var(--white);
+  background-color: var(--iris);
+
+  font-family: inherit;
+  font-weight: 600;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--iris);
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 main .hero button:hover,
@@ -139,8 +226,18 @@ main .hero button:focus {
   color: var(--iris);
 }
 
+/* ============================================= */
 main .about {
-  padding: 120px 144px 0 144px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: var(--white);
+}
+
+main .about li:not(:last-child) {
+  margin-right: 24px;
 }
 
 main .about h3 {
@@ -150,69 +247,91 @@ main .about h3 {
 }
 
 main .about p {
+  padding-top: 8px;
+
   font-weight: 400;
 }
 
-main .what-we-are-doing,
-main .our-team {
-  padding: 120px 144px 120px 144px;
+/* ============================================= */
+main .what-we-are-doing {
+  padding-top: 0;
+  padding-bottom: 120px;
+
+  background-color: var(--white);
 }
 
 main .what-we-are-doing h2,
 main .our-team h2 {
+  margin-top: 0;
+  margin-bottom: 72px;
   color: var(--navy-blue);
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 72px;
 }
 
+main .what-we-are-doing img {
+  width: 360px;
+}
+
+/* ============================================= */
 main .our-team {
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   background-color: var(--cloud);
 }
 
-main .our-team li {
+main .our-team .card-set {
+  display: flex;
+  margin-left: -24px;
+}
+
+main .our-team .card {
+  flex-basis: calc(100% / 4 - 24px - 8px);
+  /* borders 8px */
+  margin-left: 24px;
+
   background-color: var(--white);
-  width: 264px;
+
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
-main .our-team h3 {
+main .our-team .card-descr {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+main .our-team .card-descr h3 {
   color: var(--navy-blue);
+
   font-size: 20px;
   line-height: 1.2;
-  padding-top: 32px;
-  padding-bottom: 8px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 main .our-team p {
+  color: var(--slate);
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--slate);
-  padding-top: 0;
-  padding-bottom: 32px;
-  margin: 0 auto;
-  text-align: center;
 }
+
+/* ====================FOOTER=========================== */
 
 footer {
   background-color: var(--navy-blue);
-  text-align: left;
 }
 
-footer div {
-  width: 264px;
-  height: 110px;
+footer .box {
   padding-top: 100px;
-  padding-left: 156px;
   padding-bottom: 100px;
+  width: 264px;
 }
 
 footer .footer-logo {
@@ -233,10 +352,12 @@ footer p {
 /* =====================index-1=============== */
 
 .studio {
-  padding: 96px 156px 120px 156px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 96px 156px 120px 156px;
+
+  outline: 2px solid orange;
 }
 
 .studio .filter {
@@ -245,20 +366,26 @@ footer p {
   margin-right: 25%;
   margin-left: 25%;
   margin-bottom: 72px;
+
+  outline: 2px solid orange;
 }
 
 .studio .filter button {
+  padding: 12px 24px;
+
+  background-color: var(--cloud);
+  border: 1px solid var(--cornflower);
+  color: var(--iris);
+
   font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
-  background-color: var(--cloud);
-  border: 1px solid var(--cornflower);
   border-radius: 4px;
-  padding: 12px 24px;
-  color: var(--iris);
   cursor: pointer;
   transition: all 200ms ease-in-out;
+
+  outline: 2px solid orange;
 }
 
 .studio .filter button:hover,
@@ -266,37 +393,50 @@ footer p {
   background-color: var(--iris);
   border: 1px solid var(--iris);
   color: var(--cornflower);
+
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+  outline: 2px solid orange;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
+  outline: 2px solid orange;
 }
 
 .projects li {
   padding-bottom: 48px;
+  outline: 2px solid orange;
 }
 
 .projects h2 {
+  padding-left: 16px;
+
   color: var(--navy-blue);
+
   font-size: 20px;
   line-height: 1.2;
-  padding-left: 16px;
+
+  outline: 2px solid orange;
 }
 
 .projects p {
-  font-weight: 400;
   padding-left: 16px;
+
+  font-weight: 400;
+
+  outline: 2px solid orange;
 }
 
 .projects-row li {
   border: 1px solid var(--cornflower);
+  outline: 2px solid orange;
 }
 
 .projects-row {
   display: flex;
   justify-content: space-between;
+  outline: 2px solid orange;
 }
