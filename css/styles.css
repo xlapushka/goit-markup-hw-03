@@ -362,7 +362,6 @@ footer p {
   padding-bottom: 120px;
 }
 
-
 .portfolio .filter {
   display: flex;
   justify-content: space-around;
@@ -398,13 +397,12 @@ footer p {
   cursor: pointer;
 }
 
-
 .projects {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 3 - var(--marg));
   margin-right: calc(-1 * var(--marg));
-  margin-bottom: calc(-2 * var(--marg));;
+  margin-bottom: calc(-2 * var(--marg));
 }
 
 .projects .projects-card {
